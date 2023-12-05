@@ -189,6 +189,70 @@ a {
 }
 .hero__text-box {
   grid-area: 1/8/2/13;
+  padding-left: 15px;
+}
+.hero__text-box .hero__heading {
+  color: #171100;
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 1.17241;
+  letter-spacing: -1.16px;
+}
+.hero__text-box .hero__desc {
+  margin: 20px 0 40px;
+  color: #5F5B53;
+  font-size: 1.8rem;
+  line-height: 1.66667;
+}
+.hero__text-box .hero__cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.hero__text-box .hero__cta a:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.hero__text-box .hero__cta a:last-child img {
+  border-radius: 50%;
+  padding: 14px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+}
+.hero__text-box .hero__cta a:last-child span {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66667;
+}
+.hero__text-box .hero__engagement {
+  margin-top: 50px;
+}
+.hero__text-box .hero__engagement .engagement__title, .hero__text-box .hero__engagement .engagement__info {
+  color: #5F5B53;
+  font-size: 18px;
+  line-height: 1.66667;
+}
+.hero__text-box .hero__engagement .engagement__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.hero__text-box .hero__engagement .engagement__info strong {
+  color: #171100;
+  font-family: Sen;
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.2272;
+  margin-right: 10px;
 }
 
 .btn {

@@ -93,5 +93,80 @@
 
     &__text-box {
         grid-area: 1 / 8 / 2 / 13;
+        padding-left: 15px;
+
+        .hero {
+            &__heading {
+                color: #171100;
+                font-family: Sen;
+                font-size: 5.8rem;
+                font-weight: 700;
+                line-height: 1.17241;
+                letter-spacing: -1.16px;
+
+            }
+            
+            
+            &__desc {
+                margin: 20px 0 40px;
+                color: #5F5B53;
+                font-size: 1.8rem;
+                line-height: 1.66667;
+            }
+
+            &__cta {
+                @include base.flexBox(row, flex-start, center);
+                gap: 30px;
+
+                a:first-child {
+
+                }
+
+                a:last-child {
+                    @include base.flexBox(row, flex-start, center);
+                    gap: 15px;
+
+                    img {
+                        border-radius: 50%;
+                        padding: 14px;
+                        background-color: #fff;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+                    }
+
+                    span {
+                        color: #171100;
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        line-height: 1.66667;
+                    }
+                }
+            }
+
+            &__engagement {
+                margin-top: 50px;
+
+                .engagement {
+                    &__title, &__info {
+                        color: #5F5B53;
+                        font-size: 18px;
+                        line-height: 1.66667;
+                    }
+
+                    &__details {
+                        @include base.flexBox(row, flex-start, center);
+                        gap: 30px;
+                    }
+
+                    &__info strong {
+                        color: #171100;
+                        font-family: Sen;
+                        font-size: 4.4rem;
+                        font-weight: 700;
+                        line-height: 1.2272;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
     }
 }
