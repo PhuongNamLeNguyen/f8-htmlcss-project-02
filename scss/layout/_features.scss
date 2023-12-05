@@ -1,0 +1,63 @@
+@use "../base";
+
+.features {
+    margin: 200px 0;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    &__img-box {
+        grid-area: 1 / 1 / 2 / 7;
+        display: flex;
+        gap: 30px;
+
+        .features__img {
+            width: 270px;
+            height: 405px;
+            object-fit: cover;
+            border-radius: 16px;
+
+            &:first-child {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    &__text-box {
+        grid-area: 1 / 8 / 2 / 13;
+        @include base.flexBox(column, center, flex-start);
+
+        .features {
+            &__desc {
+                margin-top: 16px;
+            }
+
+            &__cta {
+                margin-top: 32px;
+                display: inline-block;
+            }
+        }
+    }
+    
+    &:last-child {
+        .features {
+            &__img-box {
+                grid-area: 1 / 8 / 2 / 13;
+                
+                .features__img {
+                    width: 470px;
+                    height: 440px;
+                    object-fit: cover;
+                    border-radius: 16px;
+                }
+            }
+            
+            &__text-box {
+                grid-area: 1 / 1 / 2 / 7;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use "../base";
+
+
+
+.cta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    cursor: pointer;
+
+    &.active {
+        background-color: #FFB900;
+    }
+}

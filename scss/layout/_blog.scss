@@ -1,0 +1,109 @@
+@use "../base";
+
+.blog {
+    padding: 100px;
+    background-color: #FFFCF4;
+
+    .container {
+
+    }
+
+    &__text-box {
+        text-align: center;
+        .blog {
+            &__desc {
+                margin-top: 16px;
+                margin: 16px auto 55px;
+                max-width: 450px;
+            }
+        }
+    }
+
+    &__list {
+        @include base.flexBox(row, space-between, center);
+        gap: 30px;
+    }  
+
+    &__item {
+        border-radius: 16px;
+        background: #FFF;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+
+            .item__btn {
+                background-color: #FFB900;
+            }
+        }
+        
+        .item {
+            &__text-box {
+                padding: 20px 30px;
+                
+            }
+
+            &__img {
+                width: 370px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 16px 16px 0px 0px;
+
+            }
+
+            &__date {
+                color: #5F5B53;
+                font-size: 1.4rem;
+                line-height: 1.85;
+                position: relative;
+                margin-left: 14px;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: -10px;
+                    transform: translate(-100%, -50%);
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: #FFB900;
+                }
+            }
+
+            &__line {
+                margin: 12px 0;
+                width: 160px;
+                height: 1px;
+                border-radius: 99px;
+                background: #E2DFDA;
+            }
+
+            &__title {
+                color: #171100;
+                font-weight: 600;
+                line-height: 1.75;
+            }
+
+            &__cta {
+                margin-top: 12px;
+                display: inline-block;
+                
+            }
+
+            &__btn {
+                min-width: 118px;
+                transition: all 0.3s;
+            }
+
+
+        }
+    }
+
+    &__cta {
+        margin-top: 38px;
+        @include base.flexBox(row, center, center);
+        gap: 6px;
+    }
+}

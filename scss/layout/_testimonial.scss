@@ -1,0 +1,63 @@
+@use "../base";
+
+.testimonial {
+    background-color: #2E2100;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        padding: 100px 0;
+    }
+
+    &__author-box {
+        grid-area: 1 / 1 / 2 / 2;
+        @include base.flexBox(column, flex-start, flex-start);
+
+        .author {
+            &__avatar {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+            }
+
+            &__name {
+                margin: 18px 0 4px;
+                color: #F7F7F7;
+                font-family: 'Sen', sans-serif;
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 1.41667;
+            }
+
+            &__major {
+                color: #BFBCB2;
+                font-size: 1.4rem;
+                line-height: 1.85;
+            }
+        }
+    }
+
+    &__cta {
+        margin-top: 28px;
+        @include base.flexBox(row, flex-start, center);
+        gap: 6px;
+    }
+
+    &__text-box {
+        grid-area: 1 / 2 / 2 / 4;
+        position: relative;
+
+        .testimonial {
+            &__text {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+                color: #FFF;
+                font-size: 2.6rem;
+                font-style: italic;
+                line-height: 1.54;
+            }
+        }
+    }
+}

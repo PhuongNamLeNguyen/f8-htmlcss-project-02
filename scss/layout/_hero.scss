@@ -25,6 +25,7 @@
     }
 
     &__card-box {
+        height: calc(100vh - 110px);
         grid-area: 1 / 4 / 2 / 7;
         position: relative;
         
@@ -94,6 +95,7 @@
     &__text-box {
         grid-area: 1 / 8 / 2 / 13;
         padding-left: 15px;
+        @include base.flexBox(column, center, flex-start);
 
         .hero {
             &__heading {
